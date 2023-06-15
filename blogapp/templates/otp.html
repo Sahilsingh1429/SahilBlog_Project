@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>NewsBlog a Blog Category Bootstrap Responsive Website Template | Home : W3layouts</title>
+
+    <link href="//fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{%static 'assets/css/style-starter.css' %}">
+    </head>
+    <body>
+        <br>
+        <br>
+        <div class="col-lg-12 form-inner-cont">
+            <form action="{% url 'otp' %}" method="post" class="signin-form" enctype="multipart/form-data">
+                {{msg}}
+                {% csrf_token %}
+                {% comment %} cross site request forgery {% endcomment %}
+                <div class="form-input">
+                    <input type="text" name="u_otp" id="w3lSubject" placeholder="Enter OTP Here "
+                        required />
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="btn btn-style btn-primary">Verify</button>
+                </div>
+            </form>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
